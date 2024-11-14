@@ -8,17 +8,15 @@ d2 = 0 # Dado 2
 ds1 = 0 # Dado 1 empieza
 ds2 = 0 # Dado 2 empieza
 
-p1 = 1 # Jugador 1 en la casilla 0
-p2 = 1 # Jugador 2 en la casilla 0
+p1 = 1 # Jugador 1 en la casilla 1
+p2 = 1 # Jugador 2 en la casilla 1
 
 p1_turn = False
 
 started1 = False
 started2 = False
 
-won = False
-
-
+# Función que inicia el juego
 def start_game():
     global ds1, ds2
     ds1 = random.randint(1,6)
@@ -29,15 +27,15 @@ def start_game():
     
     return False
 
+# Función que simula el lanzamiento de los dados
 def dice_roll():
     global d1, d2
     d1 = random.randint(1,6)
     d2 = random.randint(1,6)
 
-
-
+# Función que simula el juego de carreras
 def carreras_simulate():
-    global p1, p2, started1, started2, won
+    global p1, p2, started1, started2
     #i = 0
     while (True):
         #i += 1
