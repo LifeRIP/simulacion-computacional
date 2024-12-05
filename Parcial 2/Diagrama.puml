@@ -1,0 +1,29 @@
+@startuml
+start
+
+:Inicializar valores con los limites [a, b] y la cantidad de iteraciones N;
+:Definir la función f(x);
+ 
+:Crear lista vacía plt_vals;
+
+repeat
+    :Crear array de ceros ar con longitud N;
+    :Llenar el array ar con valores aleatorios entre a y b;
+    
+    :Inicializar integral = 0.0;
+    
+    repeat
+        :Sumar f(i) a integral;
+    repeat while (i en ar)
+
+    :Calcular ans = (b - a) / float(N) * integral;
+    :Añadir ans a plt_vals;
+repeat while (se repiten N veces)
+
+:Calcular la media de las áreas mean_area;
+:Graficar la función f(x) en el intervalo [a, b];
+:Graficar el histograma de las áreas calculadas en plt_vals;
+:Mostrar las gráficas;
+
+stop
+@enduml
